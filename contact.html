@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | Ferrari Hobbies</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Open+Sans&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="transition-overlay"></div>
+
+  <nav class="navbar">
+    <a href="index.html" style="text-decoration: none;">
+      <h1 class="logo">Fuel Your Passion</h1>
+    </a>
+    <ul class="nav-links">
+      <li><a href="explore.html">Explore Hobbies</a></li>
+      <li><a href="history.html">Ferrari History</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contact.html">Support</a></li>
+    </ul>
+  </nav>
+
+  <main class="section contact">
+    <div class="support-info">
+      <h2>Need Assistance?</h2>
+      <p>
+        Whether you have questions about our Ferrari hobby projects or need
+        more information about Ferrari’s incredible legacy, we’re here to
+        help.
+      </p>
+      <p>
+        For a deep-dive into Ferrari’s innovations and history, please visit
+        the official
+        <a class="custom-link" href="https://www.ferrari.com" target="_blank" rel="noopener noreferrer">Ferrari
+          website</a>.
+      </p>
+      <p>
+        Below are some frequently asked questions that might help answer your
+        queries.
+      </p>
+    </div>
+
+    <section class="faq">
+      <h3>Frequently Asked Questions</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            What is Ferrari Hobbies all about?
+          </button>
+          <div class="accordion-content">
+            <p>
+              Ferrari Hobbies by Young Awareness is your digital hub for everything
+              Ferrari-inspired—from car sketching and model building to RC
+              racing and racing-themed game development. We celebrate the art,
+              innovation, and passion that Ferrari represents.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            How can I learn more about Ferrari history?
+          </button>
+          <div class="accordion-content">
+            <p>
+              For a comprehensive look into Ferrari's storied past, please
+              explore our Ferrari History section, or click the link to visit
+              the official Ferrari website for more in-depth content.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Where can I get technical support for my Ferrari-themed projects?
+          </button>
+          <div class="accordion-content">
+            <p>
+              While we provide insights and creative inspiration here on
+              Ferrari Hobbies, for technical support or product-specific
+              inquiries, please consider reaching out to Ferrari or visiting
+              industry-specific forums. We’re passionate about creativity, and
+              we love sharing tips, but direct technical support might be best
+              handled by the proffesionals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Young Awareness | Ferrari Hobbies</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    accordionHeaders.forEach((header) => {
+      header.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          document.querySelectorAll(".accordion-content").forEach((acc) => {
+            acc.style.maxHeight = null;
+          });
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

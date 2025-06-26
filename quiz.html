@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz | Ferrari Hobbies</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Open+Sans&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="transition-overlay"></div>
+
+  <nav class="navbar">
+    <a href="index.html" style="text-decoration: none;">
+      <h1 class="logo">Fuel Your Passion</h1>
+    </a>
+    <ul class="nav-links">
+      <li><a href="explore.html">Explore Hobbies</a></li>
+      <li><a href="history.html">Ferrari History</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contact.html">Support</a></li>
+    </ul>
+  </nav>
+
+  <main class="section quiz">
+    <h2>What’s Your Ferrari Hobby?</h2>
+    <p>Enter your first name to personalize your result:</p>
+    <input type="text" id="userName" placeholder="Your Name" />
+    <br />
+    <button onclick="runQuiz()">Find Out</button>
+    <p id="loadingText" class="loading" style="display: none">
+      Calculating your unique hobby...
+    </p>
+    <p id="quiz-result" class="quiz-result"></p>
+
+    <section class="did-you-know">
+      <h3>Did You Know?</h3>
+      <p id="didYouKnowText"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Young Awareness | Ferrari Hobbies</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    const facts = [
+      "Ferrari's first car, the 125 S, was built in 1947.",
+      "The prancing horse was inspired by a WWI fighter pilot's emblem.",
+      "Ferrari has won more than 240 Formula 1 races.",
+      "The 250 GTO is one of the most valuable cars in the world.",
+    ];
+
+    function showRandomFact() {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById("didYouKnowText").textContent = randomFact;
+    }
+
+    showRandomFact();
+  </script>
+</body>
+
+</html>
